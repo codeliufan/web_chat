@@ -1,0 +1,43 @@
+<!Doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title> </title>
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../css/login_and_register.css" />
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+		<script type="text/javascript" src="../js/signUp.js"></script>
+	</head>
+	<body>
+		<div id="box" class="box">
+			<form id="signUp_form" method="post">
+				<h2><label>注 册</label></h2>
+				<div class="input_box">
+					<input id="userName" name="userName" type="text"/><label>用户名（字母开头，3-10位数字字母组合）</label>
+				</div>
+				
+				<div class="input_box">
+					<input id="password" name="password" type="password"/><label>密码（6位字母数字组合）</label>
+				</div>
+				<div class="input_box">
+					<input class="checkPwd" type="password"/><label>确认密码</label>
+				</div>
+
+				<div class="sex">
+					<label><input value="男" name="sex" type="radio" checked="checked" />男</label>
+					<label><input value="女" name="sex" type="radio"/>女</label>
+				</div>
+				<div class="input_box">
+					<input id="age" name="age" type="text"/><label>年龄（首位非0的1-2位数字）</label>
+				</div>
+				
+				<a id="submitBtn" class="btn" href="javascript:;">注 册</a>
+				<!-- <a href="javascript:;">找回密码</a> --><a href="signIn.html">登 录</a>
+			</form>
+			<div class="shadow_box"></div>
+		</div>
+		
+		<div class="tool"></div>
+	</body>
+</html>

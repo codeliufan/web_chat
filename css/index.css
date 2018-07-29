@@ -1,0 +1,221 @@
+
+
+.welcome{margin: 0 auto;width: 1000px; font-size: 20px; padding: 20px 0;}
+
+.content{margin: 0 auto;width: 1000px; height: 89%; overflow: hidden;}
+
+
+
+/* 左边 聊天框 */
+.content .left{
+	width: 685px; height: 90%;overflow: hidden;
+	float: left;
+	background: rgba(240,240,240,.6);
+	border-radius: 10px;box-shadow: 0 0 10px #ccc;
+}
+.chat_top{height: 30px;background: rgba(154,195,179,.8); text-align: center; line-height: 30px;}
+.chat_info{overflow: hidden;padding: 0 5px;}
+.fun_mods{height: 5%;background: rgba(154,195,179,.8);}
+.input_box{height: 20%; position: relative;}
+
+.dia_box{width: 100%;overflow: hidden;margin: 10px 0;}
+.msg_get{float: left; }
+.msg_send{float: right;}
+.msg_get span{margin: 3px 10px 3px;float:left;}
+.msg_send span{margin: 3px 10px 3px;float: right;}
+.dia_pic{
+	width:50px; height: 50px; border-radius: 50%;
+	overflow: hidden; display: inline-block;
+}
+.dia_pic img{width: 50px; height: 50px;}
+
+/*对话框*/
+.dialog{
+	overflow:hidden;
+	display: inline-block;
+	position: relative;
+	min-height: 20px; min-width: 100px;max-width: 300px; 
+	padding: 15px;
+	line-height: 22px; word-break:break-all;vertical-align: top;
+	background: #eee;
+	border-radius: 15px;
+	box-shadow: 5px 5px 5px #ddd;
+	
+}
+
+.fun_mods a{
+	display:inline-block; 
+	width:0; height: 0;
+	position: relative;
+	cursor: pointer;
+	overflow:hidden;
+	padding: 13px 13px;
+	
+ }
+.fun_mods a:nth-of-type(1){background: url(../images/bt3.jpg) no-repeat center;background-size: 90% 90%;}
+.fun_mods a input{
+	width: 100%; height: 100%;
+	position: absolute;
+	right:0; top: 0;
+	opacity: 0;
+	filter: alpha(opacity:0);
+ 	cursor: pointer;
+	}
+
+
+.fun_mods .send_file{}
+
+.input_box textarea{
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	width:100%; height: 100%;
+	border: 0;border-radius: 5px;
+	padding: 10px 10px;
+	line-height: 22px;
+	border:1px solid rgba(154,195,179,.8);
+}
+.input_box button{
+	position: absolute;
+	width: 50px; height: 50px;
+	right: 0; bottom: 0;
+	z-index: 100;
+	background: rgba(154,195,179,.8);
+	border-radius: 10%;
+}
+
+
+
+
+
+/* 右边 好友 */
+.content .right{
+	width: 280px; height: 90%;overflow: hidden;
+	margin-left: 20px;
+	float: left;
+	background: rgba(154,195,179,.8);
+	border-radius: 10px;border-radius: 10px;box-shadow: 0px 0px 10px #ddd;
+}
+
+.scroll_box{width: 100%;height: 100%; overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; position: relative;}
+
+.right .my_info{
+	
+} 
+.my_info dl{overflow: hidden;}
+.my_info .avatar_box{padding: 10px; float: left;}
+.my_info .avatar{width: 60px; border: 3px solid #fff; cursor: pointer;}
+.avatar img{width: 60px; height: 60px;}
+.my_info dd{width: 50%; height:100%; float:left;}
+.my_info .info{ line-height: 46px; font-size: 20px;}
+.my_info .my_status{width:20px; height:40px; float:left;color:green;font-size: 16px; cursor: default;}
+
+.search{width: 100%;overflow: hidden;}
+.search input{width: 98%; margin: 0 0 3px;line-height: 20px;border:1px solid #c8c8c8;padding-left: 5px;}
+
+.card_box{width:100%;position:relative;height:70%;background: rgba(230,230,230,.8);}
+.wrapper{width: 100%; -webkit-box-flex: 1; overflow: hidden; position: relative;}
+#wrapper_fst,#wrapper_scd{background: rgba(230,230,230,.5);position: absolute;}
+
+.right .active{display: block;}
+/*好友列表*/
+.pal_li{display: none;}
+.pal_li ul,.request_li ul{border-top: 1px solid #c8c8c8;}
+.list_info{height: 60px;border-bottom: 1px solid #c8c8c8;}
+.list_info dt{width: 60px;height: 100%;float: left;}
+.list_info dt img{width: 40px; height: 40px; margin: 10px; cursor: help;}
+.list_info dd{width: 200px;height: 40px; float: left; padding: 10px; position: relative;}
+.list_info b{
+	position: absolute;right: 30px; top: 21px;
+	width: 18px; height: 18px; background: red; font-weight: normal;
+	text-align: center; line-height: 18px; color: #fff;
+	border-radius: 50%;
+	display: none;
+}
+
+/*请求列表*/
+.request_li{display: none;}
+.request{
+	position: absolute; top: 30%; right: 55%;
+	width: 18px; height: 18px; background: red; font-weight: normal;
+	text-align: center; line-height: 18px; color: #fff;
+	border-radius: 50%;
+	display: none;
+}
+
+/*选项卡*/
+.tab{overflow: hidden;position: absolute;width: 100%;bottom: 0;background: rgba(154,195,179,.5);}
+.tab a{float: left; width: 49%; text-align: center; line-height: 46px; color: #000;}
+.tab a:nth-of-type(1){	border-right:.5px solid #c8c8c8;}
+.tab a:hover{color: green}
+
+
+/*showInfo*/
+.showInfo{
+	position: absolute;
+	width: 26%; height: 56%;
+	left:35%;top: 20%;
+/*	background: url(../images/bg.jpg) no-repeat;
+	background-size: 100% 100%;*/
+	background: rgba(154,195,179,.5);
+	font-size: 14px;
+	z-index: 1000;
+	padding: 2%;
+	border: 2px solid #eee;
+	border-radius: 100%;
+}
+.showInfo div{height: 20%;width: 100%} 
+.showInfo input{width: 33%;height: 30%; background: rgba(154,195,179,.8);}
+.showInfo div:nth-of-type(1){height: 25%;text-align: center;}
+.showInfo .fstInput{width: 80%;}
+.showInfo img{height: 70px;}
+
+.addBtn{text-align: center;}
+.addBtn button{width: 20%;height: 50%; border-radius: 20%;}
+.addBtn button:hover{background: #bbb;}
+
+.closeBtn{
+	width: 25px;line-height:25px; text-align: center;
+	position: absolute; right: 20%;top:8%;font-size: 20px;
+	border-radius:50%;
+	cursor: pointer;
+}
+.closeBtn:hover{background:#bbb;}
+
+
+/*头像*/
+.pic_box{
+	display: none;
+	background: rgba(0,0,0,.5);
+	position: absolute;
+	z-index: 1000;
+	top: 0;left: 0;right: 0;bottom: 0;
+	padding: 10% 30%;
+}
+.pic_box div{border:2px solid #555;background: #eee;text-align: center;}
+.pic_box img{width: 100px; height: 100px;margin: 5px;border:2px solid #eee;}
+.pic_box img:hover{border-color: #666;}
+
+
+/*模拟对话框*/
+.fakeConfirm{
+	display: none;
+	position: absolute;
+	width: 26%; height: 20%;
+	left:35%;top: 30%;
+	background: white;
+	border-radius: 5%;
+	z-index: 1000;
+}
+.fakeConfirm p{height: 60%;padding: 10%;line-height: 20px;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+.fakeConfirm button{
+	width: 20%;
+	margin: 10% 6%;
+	border: 1px #ccc solid;
+	background: white;
+}
+.fakeConfirm button:hover{border-color: green;}

@@ -1,0 +1,10 @@
+html,body,div,p,h1,h2,h3,h4,h5,h6,b,i,form,input,span,a,ul,li,dl,dt,dd,ol,img,button,table,tr,td{
+	margin:0 ;padding: 0;}
+ul,li{list-style: none;}
+a{text-decoration: none; }
+body{font-size: 12px; font-family: tahoma, arial, sans-serif;}
+img{border:0; vertical-align: bottom;}
+input,button{border:0; outline: 0;}
+
+
+

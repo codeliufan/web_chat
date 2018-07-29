@@ -1,0 +1,54 @@
+html,body{width: 100%; height: 100%;}
+body{background: url(../images/bg.jpg) no-repeat;background-size: 100% 100%; 
+	text-align: center;}
+.tool{display: inline-block; height: 100%; width: 0; vertical-align: middle;}
+.box{
+	width:374px;
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	padding-bottom: 50px;		
+}
+.shadow_box{
+	width:100%;
+	height: 100%;
+	position: absolute;
+	z-index: -100; top: 0;left: 0;
+	background: #fff;
+	opacity: .15;
+	border-radius: 10px;
+	box-shadow: 3px 4px 5px green;
+}
+
+form{ margin: 0 10% 0 10%;}
+
+label{color: #fff;}
+h2{height: 54px;text-align: center;font-size: 18px;padding-top: 60px;}
+
+.input_box{position: relative;line-height:42px; margin-bottom: 10px;}
+.input_box input{
+	width: 280px; height: 42px;
+	padding: 0 10px;
+	border-radius: 10px;
+	border: 1px solid #c1cdbd;
+	background: rgba(255,255,255,.1);
+	color: #fff;
+	}
+.input_box label{position: absolute; left: 10px; bottom: 0;z-index: -1;}
+.input_box p{color:green;text-align:left;margin-left:5px; line-height: 20px;}
+
+a{color: #fff;display: inline-block; margin: 5px 0 0 3px; }
+.btn{
+	width: 100%; line-height: 42px;
+	background: #91c46c;border-radius: 10px;
+	color: #fff; font-size: 14px;text-align: center;
+	margin: 0;
+}
+a:hover{color: green;}
+a:nth-of-type(3){float: left;}
+a:nth-of-type(2){float: right;margin-right: 3px;}
+
+
+.sex{width: 100%;margin-bottom: 10px; line-height: 16px;}
+.sex label{display:inline-block; width:46%;}
+.sex input{vertical-align:text-bottom; margin-bottom:2px; margin-bottom:-2px;}

@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset = 'utf-8' />
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/common.css" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+
+	<style type="text/css">
+		html,body{height: 100%;}
+		body{background: url(images/bg2.jpg) no-repeat;background-size: 100% 100%; }
+		canvas{width: 100%; height: 100%;overflow: hidden;background: url(images/bg.jpg) no-repeat;background-size: 100% 100%;
+			position: absolute;
+			z-index: -999;
+		}
+	</style>
+	<script type="text/javascript" src="js/snow.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/iscroll-min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+
+
+</head>
+	<body>
+		<canvas></canvas>
+		<div class="welcome">欢迎你！<span id="user">加载中...</span>,开始愉快的聊天吧！<a id="jump" href="javascript:;">登录</a></div>
+		<div class="content">
+			<!-- 左边 -->
+			<div class="left" style="display:none;">
+				<div class="scroll_box">
+					<h3 class="chat_top">正在与&nbsp;<span></span>&nbsp;聊天中。。。<button class="close" style="float:right;width:40px;;height:100%;background:rgba(154,195,178,1);cursor:pointer;"><b>X</b></button></h3>
+					<div id="wrapper_trd" class="wrapper">
+						<div class="chat_info">
+							<div class="dia_box" style="display:none">
+								<div class="msg_get">
+									<div style="overflow:hidden;"><span class="nickName">昵称</span><span class="time">昵称</span></div>
+									<div class="dia_pic">
+										<img src="images/avatar.jpg">
+									</div>
+									<div class="dialog dialog_get">接收消息示范</div>
+								</div>
+							</div>
+							<div class="dia_box" style="display:none">
+								<div class="msg_send">
+									<div style="overflow:hidden;"><span class="nickName"></span><span class="time"></span></div>
+									<div style="float:right"><div class="dialog dialog_send">发送消息示范</div>
+									<div class="dia_pic"><img src="images/avatar.jpg"></div></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="fun_mods">
+						<a href="javascript:;"><input class="send_file" type="file" name="sendPic" /></a>
+
+					</div>
+					<div class="input_box">
+						<textarea id="send_msg"></textarea>
+						<button id="send_btn">发送</button>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- 右边 -->
+			<div class="right">
+				<div class="scroll_box">
+					<div class="my_info">
+						<dl>
+							<!-- 头像 -->
+							<dt class="avatar_box">
+								<div class="avatar">
+									<img src="" />
+								</div>
+							</dt>
+							<dd>
+								<div id="myName" class="info">加载中...</div>
+								<a class="my_status" href="javascript:;">on</a>
+							</dd>
+						</dl>
+					</div>
+
+					<div class="search">
+						<input type="text" name="search" placeholder="search..."/>
+					</div>
+
+
+					<!-- 选项卡 -->
+					<div class="card_box">
+						<!-- 好友列表 -->
+						<div id="wrapper_fst" class="wrapper">
+							<div class="pal_li active">
+								<ul>
+									<li class="list_friend" style="display:none;cursor:pointer;">
+										<dl class="list_info">
+											<dt><a href="javascript:;"><img src="images/avatar.jpg"></a></dt>
+											<dd><span>我的昵称</span><br><span class="status" href="javascript:;" style="color:green;">在线</span><b>0</b></dd>
+										</dl>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- 申请列表 -->
+						<div id="wrapper_scd" class="wrapper">
+							<div class="request_li">
+								<ul>
+									<li class="list_request" style="display:none;cursor:pointer;">
+										<dl class="list_info">
+											<dt><a href="#"><img src="images/avatar.jpg"></a></dt>
+											<dd><span>我的昵称</span><br><span class="msg">对方请求添加您为好友</span></dd>
+										</dl>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- 切换按钮 -->
+					<div class="tab">
+						<a href="javascript:;" class="my_request">好友申请<b class="request"></b></a>
+						<a href="javascript:;" class="my_friend">我的朋友</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 信息展示 -->
+		<div class="showInfo" style="display:none;">
+			<div><img id="avatar" src="" /></div>
+			<div>昵称：<input id="nickName" class="fstInput" readonly="readonly" type="text" value="" /></div>
+			<div>账号：<input id="userId" readonly="readonly" type="text" value="" /> 状态：<input id="status" readonly="readonly" type="text" value="" /></div>
+			<div>年龄：<input id="age" readonly="readonly" type="text" value="" /> 性别：<input id="sex" readonly="readonly" type="text" value="" /></div>
+			<div class="addBtn"><button></button></div>
+			<b class="closeBtn">x</b>
+<!-- 			<p></p><p></p> -->
+
+		</div>
+		<!-- 头像 -->
+		<div class="pic_box">
+			<div>
+				<img src="avatar/chris.jpg" /><img src="avatar/2.jpg" /><img src="avatar/3.jpg" /><img src="avatar/4.jpg" /><img src="avatar/5.jpg" /><img src="avatar/6.jpg" /><img src="avatar/7.jpg" /><img src="avatar/8.jpg" /><img src="avatar/9.jpg" /><img src="avatar/10.jpg" />
+			</div>
+		</div>
+
+		<!-- 模拟对话框 -->
+		<div class="fakeConfirm">
+			<p></p>
+			<button class="yes">是</button><button class="no">否</button><button class="cancle">取消</button>
+		</div>
+
+
+	</body>
+
+
+	<script type="text/javascript">
+
+
+
+	</script>
+</html>
